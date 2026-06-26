@@ -97,7 +97,7 @@ export function WalletScreen() {
   };
 
   return (
-    <SafeAreaView style={s.safe}>
+    <View style={s.container}>
       <ScrollView style={s.scroll}>
         {/* Header */}
         <Text style = {s.title}>SolScan</Text>
@@ -181,7 +181,7 @@ export function WalletScreen() {
               scrollEnabled={false}
               renderItem={({ item }) => (
                 <TouchableOpacity
-                  style={s.row}
+                   style={s.row}
                   onPress={() =>
                     Linking.openURL(`https://solscan.io/tx/${item.sig}`)
                   }
@@ -209,13 +209,12 @@ export function WalletScreen() {
 
         <View style={{ height: 80 }} />
       </ScrollView>
-    </SafeAreaView>
-  
+    </View>
   );
 }
 
 const s = StyleSheet.create({
-  safe: {
+  container: {
     flex: 1,
     backgroundColor: "#0D0D12",
   },
